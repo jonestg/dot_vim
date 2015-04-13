@@ -7,6 +7,11 @@
 let mapleader=","
 let maplocalleader = "\\"
 
+" Temp fix for bug which maps <C-h> to <BS>
+if has('nvim')
+  nmap <silent> <BS> :TmuxNavigateLeft<cr>
+endif
+
 " -----------------------
 " Unmapped While Learning
 " -----------------------
@@ -94,10 +99,10 @@ nnoremap <silent> gx :wincmd x<CR>
 inoremap <C-l> <C-x><C-l>
 
 " Scroll larger amounts with C-j / C-k
-nnoremap <C-j> 15gjzz
-nnoremap <C-k> 15gkzz
-vnoremap <C-j> 15gjzz
-vnoremap <C-k> 15gkzz
+" nnoremap <C-j> 15gjzz
+" nnoremap <C-k> 15gkzz
+" vnoremap <C-j> 15gjzz
+" vnoremap <C-k> 15gkzz
 
 " ---------------
 " Insert Mode Mappings
