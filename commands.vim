@@ -16,3 +16,5 @@ command! Q q
 command! PowRestart :SilentCmd touch tmp/restart.txt; touch tmp/.livereload.rb
 command! Deploy :call VimuxRunCommand("mina deploy")
 command! Json execute ':%!python -m json.tool'
+command! Gz64Encode execute ':%!gzip | base64'
+command! Gz64Decode execute ':%!base64 --decode | gzip -d'
